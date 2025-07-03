@@ -13,6 +13,9 @@ package until the first key is pressed:
   :hook (on-first-input . which-key-mode))
 #+END_SRC
 
-In addition to =on-first-input-hook=, =on.el= also provides
-=on-first-file-hook=, =on-first-buffer-hook=, =on-switch-buffer-hook=,
-=on-switch-window-hook=, and =on-switch-frame-hook=.
+The list of hooks provided by =on.el= is as follows:
+
+- =on-first-input-hook=: run before the first user input.
+- =on-first-file-hook=: run before the first interactively opened file.
+- =on-first-buffer-hook=: run before the first interactively opened buffer.
+- =on-init-ui-hook=: run when the UI has been initialized. This one is useful for setting fonts and enabling custom themes without having to worry about whether Emacs is running as a daemon or not.
